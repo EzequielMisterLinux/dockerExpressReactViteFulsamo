@@ -7,7 +7,8 @@ Este proyecto es una aplicación web desarrollada utilizando tecnologías como D
 - **Humberto Ezequiel Zelaya Campos** ([@EzequielMisterLinux](https://github.com/EzequielMisterLinux))
 - **José Rodolfo Vargas Blanco** ([@rodolVargasdev](https://github.com/rodolVargasdev))
 - **Angie Michelle Díaz Urias** ([@angiediaz202](https://github.com/angiediaz202))
-
+- **Francisca Fernanda Romero Claros** ([@Fer2345Romero](https://github.com/Fer2345Romero))
+- **Fabio Alejandro Ordoñez Cerritos** ([@FabiioDev](https://github.com/FabiioDev))
 ## Instrucciones de Uso
 ```bash
 # Clona este repositorio en tu máquina local.
