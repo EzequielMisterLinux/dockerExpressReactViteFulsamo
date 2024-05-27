@@ -6,6 +6,7 @@ Este proyecto es una aplicación web desarrollada utilizando tecnologías como D
 ## Integrantes
 - **Humberto Ezequiel Zelaya Campos** ([@EzequielMisterLinux](https://github.com/EzequielMisterLinux))
 - **José Rodolfo Vargas Blanco** ([@rodolVargasdev](https://github.com/rodolVargasdev))
+- **Angie Michelle Díaz Urias** ([@angiediaz202](https://github.com/angiediaz202))
 
 ## Instrucciones de Uso
 ```bash
