@@ -1,4 +1,6 @@
 import React from 'react';
+import { RiMovie2Fill } from 'react-icons/ri';
+import ReactPlayer from 'react-player';
 
 const MovieModal = ({ selectedMovie, handleCloseModal }) => (
   selectedMovie && (
@@ -14,21 +16,7 @@ const MovieModal = ({ selectedMovie, handleCloseModal }) => (
           <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
             <div className="sm:flex sm:items-start">
               <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
-                <svg
-                  className="h-6 w-6 text-red-600"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M7 4v16m7-16v16"
-                  />
-                </svg>
+                <RiMovie2Fill className="h-6 w-6 text-red-600" />
               </div>
               <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                 <h3 className="text-lg leading-6 font-medium text-gray-900">
@@ -39,14 +27,14 @@ const MovieModal = ({ selectedMovie, handleCloseModal }) => (
                   <p className="text-sm text-gray-500">Categoría: {selectedMovie.category}</p>
                   <p className="text-sm text-gray-500">Actor: {selectedMovie.actor}</p>
                   <p className="text-sm text-gray-500">Precio: ${selectedMovie.price}</p>
-                  <a
-                    href={selectedMovie.movieUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-blue-500 hover:text-blue-700"
-                  >
-                    Ver película
-                  </a>
+                  <div className="mt-4">
+                    <ReactPlayer
+                      url={selectedMovie.movieUrl}
+                      width="100%"
+                      height="auto"
+                      controls
+                    />
+                  </div>
                 </div>
               </div>
             </div>

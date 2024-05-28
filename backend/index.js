@@ -16,7 +16,7 @@ const __dirname = dirname(__filename);
 const PORT = 3000;
 
 const corsOptions = {
-    origin: 'http://localhost:8080',
+    origin: 'http://localhost:5173',
 };
 
 app.use(cors(corsOptions));
@@ -33,7 +33,7 @@ app.get('/movies', (req, res) => {
 });
 
 app.post('/movies', (req, res) => {
-    const { name, description, category, actor, price, imageUrl, movieUrl } = req.body;  // corregido a imageUrl
+    const { name, description, category, actor, price, imageUrl, movieUrl } = req.body; 
     const newMovie = { id: uuidv4(), name, description, category, actor, price, imageUrl, movieUrl };
     const moviesFile = path.join(__dirname, 'movies.json');
     try {
@@ -48,7 +48,7 @@ app.post('/movies', (req, res) => {
 
 app.put('/movies/:id', (req, res) => {
     const movieId = req.params.id;
-    const { name, description, category, actor, price, imageUrl, movieUrl } = req.body;  // corregido a imageUrl
+    const { name, description, category, actor, price, imageUrl, movieUrl } = req.body;  
     const moviesFile = path.join(__dirname, 'movies.json');
 
     try {
@@ -56,7 +56,7 @@ app.put('/movies/:id', (req, res) => {
         const movieIndex = movies.findIndex((movie) => movie.id === movieId);
 
         if (movieIndex !== -1) {
-            movies[movieIndex] = { id: movieId, name, description, category, actor, price, imageUrl, movieUrl };  // corregido a imageUrl
+            movies[movieIndex] = { id: movieId, name, description, category, actor, price, imageUrl, movieUrl };  
             fs.writeFileSync(moviesFile, JSON.stringify(movies, null, 2));
             res.json(movies[movieIndex]);
         } else {
